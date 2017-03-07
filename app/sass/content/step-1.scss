@@ -135,10 +135,16 @@ input[type=radio]{
 
       @include breakpoint(max-width 767px){
         margin-top: 25px;
+        width: 450px;
+        margin-left: auto;
+        margin-right: auto;
       }
       @include breakpoint(max-width 479px){
         @include display(flex);
         @include flex-direction(column);
+        width: 210px;
+        margin-left: auto;
+        margin-right: auto;
       }
 
       .item{
@@ -150,7 +156,7 @@ input[type=radio]{
           margin-bottom: 15px;
           margin-left: auto;
           margin-right: auto;
-          width: 73%;
+          width: 100%;
         }
 
         &:first-child{
@@ -316,13 +322,16 @@ input[type=radio]{
       }
       @include breakpoint(max-width 479px){
         @include flex-direction(column);
+        width: 210px;
+        margin-left: auto;
+        margin-right: auto;
       }
 
       .item{
         @include breakpoint(max-width 479px){
           margin-left: auto;
           margin-right: auto;
-          width: 77%;
+          width: 100%;
         }
 
         &:last-child{
@@ -482,6 +491,9 @@ input[type=radio]{
         margin-left: auto;
         margin-right: auto;
       }
+      @include breakpoint(max-width 479px){
+        width: 220px;
+      }
 
       .input{
         font-family: GothamProBold;
@@ -491,6 +503,10 @@ input[type=radio]{
         display: inline-block;
         margin-top: 20px;
         margin-right: 5px;
+
+        @include breakpoint(max-width 479px){
+          margin-right: 0;
+        }
       }
     }
   }
@@ -509,6 +525,9 @@ input[type=radio]{
       @include display(flex);
       @include flex-direction(column);
       padding-top: 0;
+    }
+    @include breakpoint(max-width 479px){
+      width: 85%;
     }
 
     .title {
@@ -558,6 +577,24 @@ input[type=radio]{
         margin-right: auto;
       }
 
+      .item{
+        &:nth-child(2){
+          @include breakpoint(max-width 479px){
+            float: right;
+          }
+        }
+        &:nth-child(4){
+          @include breakpoint(max-width 479px){
+            float: right;
+          }
+        }
+        &:nth-child(6){
+          @include breakpoint(max-width 479px){
+            float: right;
+          }
+        }
+      }
+
       .input{
         font-family: GothamProBold;
         font-size: 16px;
@@ -568,6 +605,10 @@ input[type=radio]{
         line-height: 52px;
         margin-top: 20px;
         margin-right: 5px;
+
+        @include breakpoint(max-width 479px){
+          margin-right: 0;
+        }
       }
 
       a{
@@ -745,6 +786,12 @@ input[type=radio]{
       }
     }
     .right{
+      @include breakpoint(max-width 479px){
+        width: 287px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
       .trener-avatar{
         width: 100px;
         height: 100px;
