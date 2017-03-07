@@ -31,9 +31,15 @@ jQuery(document).ready(function() {
         return false;
     });
 
-    jQuery('select option').click(function (){
-        jQuery(this).toggleClass("active");
-    });  
+        $(".input input[type='checkbox']").click(function(e) {
+            e.preventDefault();  
+            if($(this).hasClass('active')) {
+                $(this).removeClass('active');
+            } else {
+                $(this).addClass('active');
+            }
+        })
+
 });
 $(".input").click(function(e) {
 
@@ -78,7 +84,7 @@ $(".input").click(function(e) {
                 $(".area .input input[type='radio']").parent().removeClass('active-radio').addClass('no-active-radio');
                 $(this).addClass('active-radio').removeClass('no-active-radio');
 
-                $(".input.no-active-radio").each(function() { 
+                $(".input.no-active-radio").each(function() {
                     $(".click-efect", this).animate({
                         "width": "0",
                         "height": "0",
@@ -109,3 +115,4 @@ $(".input").click(function(e) {
     }
 
 });
+
