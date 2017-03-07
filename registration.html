@@ -1,13 +1,10 @@
 <!-- start html_open.html-->
 <!DOCTYPE html>
 <html>
-<head lang="en">
+<head lang="zxx">
     <meta charset="UTF-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <!--для масштабируемых моделей-->
-    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
-    <!--для немасштабируемых моделей-->
-    <meta name="viewport" content="width=1366">
+    <meta name="viewport" content="initial-scale=1.0, width=device-width">
     <!--для ссылок с мобильными телефонами-->
     <meta name="format-detection" content="telephone=no">
     <title></title>
@@ -40,11 +37,44 @@
             <div class="title">Выберите цель<span></span></div>
         </div>
 
-        <div class="right">
-            <a href="#">НАЧАТЬ БЕГАТЬ</a>
+        <div class="right area">
+
+            <div class="item">
+                <span class="input">
+                    <label for="start">НАЧАТЬ БЕГАТЬ</label>
+                    <input type="radio" name="select-km" id="start">
+				</span>
+            </div>
+            <div class="item">
+                <span class="input">
+                    <label for="10km">10КМ</label>
+                    <input type="radio" id="10km" name="select-km">
+                </span>
+            </div>
+            <div class="item">
+                <span class="input">
+                    <label for="21km">21.1КМ</label>
+                    <input type="radio" id="21km" name="select-km">
+                </span>
+            </div>
+            <div class="item">
+                <span class="input">
+                    <label for="42km">42.2КМ</label>
+                    <input type="radio" id="42km" name="select-km">
+                </span>
+            </div>
+
+            <!--<select size="3" multiple name="hero[]">
+                <option value="НАЧАТЬ БЕГАТЬ">НАЧАТЬ БЕГАТЬ</option>
+                <option value="10КМ"></option>
+                <option value="21.1КМ">21.1КМ</option>
+                <option value="42.2КМ">42.2КМ</option>
+            </select>-->
+
+            <!--<a href="#">НАЧАТЬ БЕГАТЬ</a>
             <a href="#">10КМ</a>
             <a href="#">21.1КМ</a>
-            <a href="#">42.2КМ</a>
+            <a href="#">42.2КМ</a>-->
         </div>
     </div>
 
@@ -59,9 +89,20 @@
 
     <div class="wrap" id="step-2">
         <div class="title" id="fade-it">Тип тренировок<span></span></div>
-        <div class="right">
-            <a href="#">ИНДИВИДУАЛЬНЫЕ</a>
-            <a href="#">ГРУППОВЫЕ</a>
+        <div class="right area">
+            <div class="item">
+                <span class="input">
+                    <label for="individuals">ИНДИВИДУАЛЬНЫЕ</label>
+                    <input type="radio" name="type" id="individuals">
+				</span>
+            </div>
+            <div class="item">
+                <span class="input">
+                    <label for="group">ГРУППОВЫЕ</label>
+                    <input type="radio" name="type" id="group">
+                </span>
+            </div>
+
         </div>
     </div>
 
@@ -79,14 +120,63 @@
             <div class="title" id="fade-it-3">День недели<span></span></div>
         </div>
 
-        <div class="right">
-            <a href="#">Пн</a>
+        <div class="right area">
+
+            <div class="item">
+                <span class="input">
+                    <label for="pn">Пн</label>
+                    <input type="radio" name="day" id="pn">
+				</span>
+            </div>
+            <div class="item">
+                <span class="input">
+                    <label for="vt">Вт</label>
+                    <input type="radio" id="vt" name="day">
+                </span>
+            </div>
+            <div class="item">
+                <span class="input">
+                    <label for="sr">Ср</label>
+                    <input type="radio" id="sr" name="day">
+                </span>
+            </div>
+            <div class="item">
+                <span class="input">
+                    <label for="cht">Чт</label>
+                    <input type="radio" id="cht" name="day">
+                </span>
+            </div>
+            <div class="item">
+                <span class="input">
+                    <label for="pt">Пт</label>
+                    <input type="radio" id="pt" name="day">
+                </span>
+            </div>
+            <div class="item">
+                <span class="input">
+                    <label for="sb">Сб</label>
+                    <input type="radio" id="sb" name="day">
+                </span>
+            </div>
+            <div class="item">
+                <span class="input">
+                    <label for="vs">Вс</label>
+                    <input type="radio" id="vs" name="day">
+                </span>
+            </div>
+
+
+
+            <!--<a href="#">Пн</a>
             <a href="#">Вт</a>
             <a href="#">Ср</a>
             <a href="#">Чт</a>
             <a href="#">Пт</a>
             <a href="#">Сб</a>
-            <a href="#">Вс</a>
+            <a href="#">Вс</a>-->
+
+
+
         </div>
     </div>
 
@@ -104,13 +194,43 @@
             <div class="title" id="fade-it-4">Время<span></span></div>
         </div>
 
-        <div class="right">
-            <a href="#">7:00</a>
-            <a href="#">9:00</a>
-            <a href="#">12:00</a>
-            <a href="#">15:00</a>
-            <a href="#">18:00</a>
-            <a href="#">20:00</a>
+        <div class="right area">
+            <div class="item">
+                <span class="input">
+                    <label for="time7">7:00</label>
+                    <input type="radio" id="time7" name="time">
+				</span>
+            </div>
+            <div class="item">
+                <span class="input">
+                    <label for="time9">9:00</label>
+                    <input type="radio" id="time9" name="time">
+                </span>
+            </div>
+            <div class="item">
+                <span class="input">
+                    <label for="time12">12:00</label>
+                    <input type="radio" id="time12" name="time">
+                </span>
+            </div>
+            <div class="item">
+                <span class="input">
+                    <label for="time15">15:00</label>
+                    <input type="radio" id="time15" name="time">
+                </span>
+            </div>
+            <div class="item">
+                <span class="input">
+                    <label for="time18">18:00</label>
+                    <input type="radio" id="time18" name="time">
+                </span>
+            </div>
+            <div class="item">
+                <span class="input">
+                    <label for="time20">20:00</label>
+                    <input type="radio" id="time20" name="time">
+                </span>
+            </div>
         </div>
     </div>
 
@@ -148,15 +268,66 @@
             <div class="title" id="fade-it-6">Выбери тренера<span></span></div>
         </div>
 
-        <div class="right">
-            <div class="trener-avatar"><img src="img/steps/ava-1.jpeg" alt=""></div>
+        <div class="right area">
+
+            <div class="trener-avatar">
+                <span class="input">
+                    <img src="img/steps/ava-1.jpeg" alt="">
+                    <input type="radio" name="treners" id="trener1">
+                </span>
+            </div>
+            <div class="trener-avatar">
+                <span class="input">
+                    <img for="trener2" src="img/steps/ava-2.jpg" alt="">
+                    <input type="radio" name="treners" id="trener2">
+                </span>
+            </div>
+            <div class="trener-avatar">
+                <span class="input">
+                    <img src="img/steps/ava-1.jpeg" alt="">
+                    <input type="radio" name="treners" id="trener3">
+                </span>
+            </div>
+            <div class="trener-avatar">
+                <span class="input">
+                    <img src="img/steps/ava-1.jpeg" alt="">
+                    <input type="radio" name="treners" id="trener4">
+                </span>
+            </div>
+            <div class="trener-avatar">
+                <span class="input">
+                    <img src="img/steps/ava-1.jpeg" alt="">
+                    <input type="radio" name="treners" id="trener5">
+                </span>
+            </div>
+            <div class="trener-avatar">
+                <span class="input">
+                    <img src="img/steps/ava-1.jpeg" alt="">
+                    <input type="radio" name="treners" id="trener6">
+                </span>
+            </div>
+            <div class="trener-avatar">
+                <span class="input">
+                    <img src="img/steps/ava-1.jpeg" alt="">
+                    <input type="radio" name="treners" id="trener7">
+                </span>
+            </div>
+            <div class="trener-avatar">
+                <span class="input">
+
+                    <input type="radio" name="treners" id="trener8">
+                </span>
+            </div>
+
+            <!--<div class="trener-avatar"><img src="img/steps/ava-1.jpeg" alt=""></div>
             <div class="trener-avatar"><img src="img/steps/ava-2.jpg" alt=""></div>
             <div class="trener-avatar"><img src="" alt=""></div>
             <div class="trener-avatar"><img src="" alt=""></div>
             <div class="trener-avatar"><img src="" alt=""></div>
             <div class="trener-avatar"><img src="" alt=""></div>
             <div class="trener-avatar"><img src="" alt=""></div>
-            <div class="trener-avatar"><img src="" alt=""></div>
+            <div class="trener-avatar"><img src="" alt=""></div>-->
+
         </div>
     </div>
   
@@ -174,9 +345,15 @@
             <div class="title" id="fade-it-7">Online обучение<span></span></div>
         </div>
 
-        <div class="right">
-            <button>Да!</button>
-            <button>Нет</button>
+        <div class="right area">
+                <span class="input">
+                    <label for="yes">Да!</label>
+                    <input type="radio" id="yes" name="online">
+				</span>
+                <span class="input">
+                    <label for="no">Нет</label>
+                    <input type="radio" id="no" name="online">
+                </span>
         </div>
     </div>
 
@@ -228,7 +405,7 @@
     </div>
 
     <div class="bottom">
-        <a href="#step-7" class="prev">Назад</a>
+        <a href="#step-8" class="prev">Назад</a>
         <a href="#" class="next active">К ОПЛАТЕ 800</a>
     </div>
 </section>

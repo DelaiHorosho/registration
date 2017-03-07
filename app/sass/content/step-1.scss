@@ -1,6 +1,54 @@
-body,html{
+/*body,html{
   overflow-y:hidden;
+}*/
+
+/* radiobuttons */
+
+.input,
+.input label {
+  width: 210px;
+  float: left;
+  position: relative;
 }
+.input {
+  overflow: hidden;
+  color: #fff;
+  background-color: #000;
+  box-shadow:0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  @include transition(300ms);
+  border-radius: 50px;
+}
+.input input {
+  display: none;
+}
+.input label {
+  font-weight: 400;
+  color: #fff;
+  text-align: center;
+  text-transform:uppercase;
+  cursor: pointer;
+  font-size: 14px;
+  z-index: 3;
+  transition: 300ms;
+  -webkit-transition: 300ms;
+  -ms-transition: 300ms;
+  height: 53px;
+  line-height: 45px;
+}
+.input:hover{
+  box-shadow:0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15)
+}
+.click-efect {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #a056a0;
+  border-radius: 50%;
+}
+input[type=radio]{
+  display: none;
+}
+
 .step-1{
   width: 90%;
   margin-left: auto;
@@ -18,6 +66,10 @@ body,html{
     width: 70%;
     margin-left: auto;
     margin-right: auto;
+
+    @include breakpoint(max-width 1250px){
+      width: 100%;
+    }
 
     .left{
       float: left;
@@ -55,42 +107,81 @@ body,html{
       float: right;
       font-family: GothamProBold;
       margin-top: 125px;
+      width: 100%;
 
-      a{
-        color: #ffffff;
-        font-size: 16px;
-        background-color: #000000;
-        border-radius: 30px;
-        width: 210px;
-        height: 55px;
-        text-align: center;
-        display: inline-block;
-        line-height: 55px;
-        transition: background-color 0.2s ease-in-out;
-
-        &:hover{
-          background-color: #a056a0;
-        }
+      .item{
         &:first-child{
-          margin-right: 39px;
-          margin-bottom: 30px;
+          .input{
+            margin-right: 39px;
+          }
         }
         &:nth-child(2){
-          margin-bottom: 30px;
+          .input{
+            margin-bottom: 30px;
+          }
         }
         &:nth-child(3){
-          margin-right: 39px;
+          .input{
+            margin-right: 39px;
+          }
         }
+        .input,
+        .input label {
+          width: 210px;
+          float: left;
+          position: relative;
+        }
+        .input {
+          overflow: hidden;
+          border-radius: 2px;
+          color: #fff;
+          background-color: #000;
+          box-shadow:0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+          transition: 300ms;
+          -webkit-transition: 300ms;
+          -ms-transition: 300ms;
+          border-radius: 50px;
+        }
+        .input input {
+          display: none;
+        }
+        .input label {
+          font-weight: 400;
+          color: #fff;
+          text-align: center;
+          text-transform:uppercase;
+          cursor: pointer;
+          font-size: 14px;
+          z-index: 3;
+          transition: 300ms;
+          -webkit-transition: 300ms;
+          -ms-transition: 300ms;
+          height: 45px;
+          line-height: 50px;
+        }
+        .input:hover{
+          box-shadow:0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15)
+        }
+        .click-efect {
+          position: absolute;
+          top: 0;
+          left: 0;
+          background: #a056a0;
+          border-radius: 50%;
+        }
+        input[type=radio]{
+          display: none;
+        }
+      }
       }
     }
   }
-}
 .bottom{
   text-align: right;
-  margin-top: 140px;
   margin-right: auto;
   margin-left: auto;
   width: 90%;
+  margin-top: 140px;
 
   a{
     font-family:GothamProMedium;
@@ -122,6 +213,10 @@ body,html{
     position: relative;
     padding-top: 110px;
 
+    @include breakpoint(max-width 1250px){
+      width: 85%;
+    }
+
     .title{
       font-size: 25px;
       font-family: GothamProBold;
@@ -129,9 +224,9 @@ body,html{
       height: 144px;
       background-size: 140px;
       background-position: center top;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
+      @include display(flex);
+      @include flex-direction(column);
+      @include justify-content(center);
       position: relative;
       text-align: center;
 
@@ -150,7 +245,69 @@ body,html{
     }
     .right{
       width: 68%;
-      text-align: right;
+      @include display(flex);
+      @include justify-content(flex-end);
+
+      .input,
+      .input label {
+        width: 210px;
+        float: left;
+        position: relative;
+      }
+      .input {
+        overflow: hidden;
+        border-radius: 30px;
+        color: #fff;
+        background-color: #000;
+        box-shadow:0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+        transition: 300ms;
+        -webkit-transition: 300ms;
+        -ms-transition: 300ms;
+        font-family: GothamProBold;
+        font-size: 16px;
+        width: 210px;
+        height: 55px;
+        display: inline-block;
+        margin-top: 40px;
+
+        &:first-child{
+          margin-right: 39px;
+        }
+        &:nth-child(2){
+          font-size: 15px;
+          margin-right: 0;
+        }
+      }
+      .input input {
+        display: none;
+      }
+      .input label {
+        font-weight: 400;
+        color: #fff;
+        text-align: center;
+        text-transform:uppercase;
+        cursor: pointer;
+        font-size: 14px;
+        z-index: 3;
+        transition: 300ms;
+        -webkit-transition: 300ms;
+        -ms-transition: 300ms;
+        height: 45px;
+        line-height: 55px;
+      }
+      .input:hover{
+        box-shadow:0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15)
+      }
+      .click-efect {
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: #a056a0;
+        border-radius: 50%;
+      }
+      input[type=radio]{
+        display: none;
+      }
 
       a{
         color: #ffffff;
@@ -192,6 +349,10 @@ body,html{
     margin-right: auto;
     padding-top: 110px;
 
+    @include breakpoint(max-width 1250px){
+      width: 90%;
+    }
+
     .title {
       font-size: 25px;
       font-family: GothamProBold;
@@ -224,24 +385,14 @@ body,html{
     .right{
       width: 55%;
 
-      a{
-        color: #ffffff;
+      .input{
         font-family: GothamProBold;
         font-size: 16px;
-        background-color: #000000;
-        border-radius: 30px;
         width: 110px;
         height: 42px;
-        text-align: center;
         display: inline-block;
-        line-height: 42px;
-        transition: background-color 0.2s ease-in-out;
         margin-top: 20px;
         margin-right: 5px;
-
-        &:hover{
-          background-color: #a056a0;
-        }
       }
     }
   }
@@ -251,7 +402,7 @@ body,html{
 
   .wrap{
     display: flex;
-    width: 65%;
+    width: 85%;
     margin-left: auto;
     margin-right: auto;
     padding-top: 110px;
@@ -290,6 +441,18 @@ body,html{
       width: 55%;
       margin-top: 50px;
 
+      .input{
+        font-family: GothamProBold;
+        font-size: 16px;
+        width: 120px;
+        height: 52px;
+        border-radius: 30px;
+        display: inline-block;
+        line-height: 52px;
+        margin-top: 20px;
+        margin-right: 5px;
+      }
+
       a{
         color: #ffffff;
         font-family: GothamProBold;
@@ -321,6 +484,10 @@ body,html{
     margin-left: auto;
     margin-right: auto;
     padding-top: 110px;
+
+    @include breakpoint(max-width 1250px){
+      width: 90%;
+    }
 
     .title {
       font-size: 25px;
@@ -399,6 +566,10 @@ body,html{
     margin-right: auto;
     padding-top: 110px;
 
+    @include breakpoint(max-width 1250px){
+      width: 90%;
+    }
+
     .left{
       width: 68%;
 
@@ -445,6 +616,22 @@ body,html{
           height: auto;
         }
       }
+      .input{
+        background-color: #8f8f8f;
+        width: 100px;
+        height: 100px;
+      }
+      .input.active-radio{
+        box-shadow: 0px 2px 5px 2px rgba(0,0,0,0.1);
+        border: 3px solid #a056a0;
+
+        img{
+          box-shadow: 0px 2px 5px 2px rgba(0,0,0,0.1);
+        }
+      }
+      .click-efect{
+        background: none;
+      }
     }
   }
 }
@@ -489,6 +676,18 @@ body,html{
       }
     }
     .right{
+      .input{
+        font-family: GothamProBold;
+        font-size: 16px;
+        border-radius: 30px;
+        width: 140px;
+        height: 52px;
+        display: inline-block;
+        line-height: 52px;
+        margin-top: 35px;
+        margin-right: 10px;
+      }
+
       button{
         color: #ffffff;
         font-family: GothamProBold;
@@ -617,6 +816,10 @@ body,html{
     margin-right: auto;
     padding-top: 110px;
 
+    @include breakpoint(max-width 1250px){
+      width: 90%;
+    }
+
     .left{
       width: 40%;
 
@@ -683,6 +886,24 @@ body,html{
         background-color: #7d53bd;
         color: #fff;
       }
+    }
+  }
+  input[type=submit]{
+    text-align: center;
+    margin-top: 60px;
+    width: 230px;
+    font-size: 14px;
+    font-family: GothamProBold;
+    transition: all 0.2s ease-in-out;
+    border-radius: 50px;
+    border: 1px solid #000;
+    background-color: #fff;
+    height: 45px;
+
+    &:hover{
+      border-color: #7d53bd;
+      background-color: #7d53bd;
+      color: #fff;
     }
   }
 }
