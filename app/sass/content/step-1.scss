@@ -1,6 +1,10 @@
-/*body,html{
+/body,html{
   overflow-y:hidden;
-}*/
+
+  @include breakpoint(max-width 767px){
+    overflow-y:visible;
+  }
+}
 
 /* radiobuttons */
 
