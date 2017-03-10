@@ -1,10 +1,10 @@
-/body,html{
+/*body,html{
   overflow-y:hidden;
 
   @include breakpoint(max-width 767px){
     overflow-y:visible;
   }
-}
+}*/
 
 /* radiobuttons */
 
@@ -21,9 +21,6 @@
   box-shadow:0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
   @include transition(300ms);
   border-radius: 50px;
-}
-.input input {
-  display: none;
 }
 .input label {
   font-weight: 400;
@@ -49,8 +46,20 @@
   background: #a056a0;
   border-radius: 50%;
 }
+.input{
+  label{
+    margin-bottom: 0 !important;
+  }
+}
 input[type=radio]{
-  display: none;
+  display: block;
+  position: absolute;
+  top: -60px;
+
+  &:checked ~ label{
+    background-color: #a056a0;
+    margin-bottom: 0;
+  }
 }
 
 .step-1{
@@ -199,9 +208,6 @@ input[type=radio]{
           -ms-transition: 300ms;
           border-radius: 50px;
         }
-        .input input {
-          display: none;
-        }
         .input label {
           font-weight: 400;
           color: #fff;
@@ -213,7 +219,7 @@ input[type=radio]{
           transition: 300ms;
           -webkit-transition: 300ms;
           -ms-transition: 300ms;
-          height: 45px;
+          height: 52px;
           line-height: 50px;
         }
         .input:hover{
@@ -225,9 +231,6 @@ input[type=radio]{
           left: 0;
           background: #a056a0;
           border-radius: 50%;
-        }
-        input[type=radio]{
-          display: none;
         }
       }
       }
@@ -372,9 +375,6 @@ input[type=radio]{
           font-size: 15px;
         }
       }
-      .input input {
-        display: none;
-      }
       .input label {
         font-weight: 400;
         color: #fff;
@@ -386,7 +386,7 @@ input[type=radio]{
         transition: 300ms;
         -webkit-transition: 300ms;
         -ms-transition: 300ms;
-        height: 45px;
+        height: 55px;
         line-height: 55px;
       }
       .input:hover{
@@ -508,6 +508,10 @@ input[type=radio]{
         margin-top: 20px;
         margin-right: 5px;
 
+        input{
+          display: none;
+        }
+
         @include breakpoint(max-width 479px){
           margin-right: 0;
         }
@@ -517,6 +521,10 @@ input[type=radio]{
 }
 .step-4{
   padding-top: 275px;
+
+  .input label{
+    line-height: 52px;
+  }
 
   .wrap{
     display: flex;
@@ -822,17 +830,21 @@ input[type=radio]{
       }
       .input{
         background-color: #8f8f8f;
-        width: 100px;
-        height: 100px;
-      }
-      .input.active-radio{
-        box-shadow: 0px 2px 5px 2px rgba(0,0,0,0.1);
-        border: 3px solid #a056a0;
 
-        img{
-          box-shadow: 0px 2px 5px 2px rgba(0,0,0,0.1);
+        input{
+          &:checked ~ label{
+            box-shadow: 0px 2px 5px 2px rgba(0,0,0,0.1);
+            border: 3px solid #a056a0;
+          }
+        }
+        label{
+          width: 100px;
+          height: 100px;
+          overflow: hidden;
+          border-radius: 50px;
         }
       }
+
       .click-efect{
         background: none;
       }
@@ -1194,4 +1206,54 @@ input[type=radio]{
 }
 section{
   position: relative;
+}
+
+.selections-steps{
+  .select{
+    display: none;
+  }
+  .select.active{
+    display: block;
+  }
+}
+.step-4 #step-10 .title span{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(../img/steps/bg-3.png);
+    background-position: 50%;
+    background-size: 60%;
+    background-repeat: no-repeat;
+    opacity: .05;
+    transform: rotate(0);
+}
+.step-4 #step-11 .left .title span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(../img/steps/bg-7.png);
+  background-position: 50%;
+  background-size: 60%;
+  background-repeat: no-repeat;
+  opacity: .05;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=5)";
+  transform: rotate(0);
+}
+.step-4 #step-12 .left .title span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(../img/steps/bg-8.png);
+  background-position: 50%;
+  background-size: 60%;
+  background-repeat: no-repeat;
+  opacity: .05;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=5)";
+  transform: rotate(0);
 }
