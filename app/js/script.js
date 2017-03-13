@@ -134,6 +134,13 @@ $(".input").click(function(e) {
                 }); 
             });
         });
-    })
 
+        $('.step-2 .area .item.group').click(function () {
+            $('a.reuse').attr('href', '#step-10');
+        });
+
+        $('.step-2 .area .item.one').click(function () {
+            $('a.reuse').attr('href', '#step-3');
+        }); 
+    })
 });
