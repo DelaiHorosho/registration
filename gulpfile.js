@@ -69,10 +69,11 @@ gulp.task('js-libs', function () {
         'app/libs/js-libs/bootstrap.min.js',
         'app/libs/js-libs/validation.js',
         'app/libs/js-libs/fotorama.js',
-        'app/libs/js-libs/lightbox.min.js',
+        'app/libs/js-libs/lightbox.min.js', 
         'app/libs/js-libs/owl.carousel.min.js',
         'app/libs/js-libs/slick.min.js',  
-        'app/libs/js-libs/jquery.superscrollorama.js'
+        'app/libs/js-libs/jquery.validationEngine-en.js',
+        'app/libs/js-libs/jquery.validationEngine.js'
     ])
         .pipe(concat('libs.min.js')) // Собираем их в кучу в новом файле libs.min.js
         .pipe(uglify()) // Сжимаем JS файл

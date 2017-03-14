@@ -125,7 +125,6 @@ $(".input").click(function(e) {
     }
 
     $(function() {
-
         $('.step-2 .area').each(function() {
             $(this).find('.item').each(function(i) {
                 $(this).click(function(){
@@ -142,5 +141,5 @@ $(".input").click(function(e) {
         $('.step-2 .area .item.one').click(function () {
             $('a.reuse').attr('href', '#step-3');
         }); 
-    })
+    });
 });
